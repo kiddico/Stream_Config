@@ -23,6 +23,7 @@ mv nginx-$version nginx
 #   https://github.com/arut/nginx-rtmp-module/releases
 
 git clone https://github.com/arut/nginx-rtmp-module
+sed -i -e 's/NGINX RTMP (github.com\/arut\/nginx-rtmp-module)/Hi Mom!/g' nginx-rtmp-module/ngx_rtmp_codec_module.c
 
 #cd nginx/conf
 cd nginx
@@ -36,7 +37,9 @@ cd nginx
 	--lock-path=/var/run/nginx.lock \
 	--with-http_ssl_module \
 	--without-http_rewrite_module \
-	--add-module=$tippytop/nginx-rtmp-module
+	--add-module=$tippytop/nginx-rtmp-module \
+	--with-cc-opt="-march=native -flto"
+
 
 
 make -j8

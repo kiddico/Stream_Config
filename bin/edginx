@@ -1,0 +1,4 @@
+sudo vim /etc/nginx/nginx.conf
+cp /etc/nginx/nginx.conf /home/nick/.bin/nginx.conf.backup
+sudo systemctl restart nginx
+sudo systemctl status nginx

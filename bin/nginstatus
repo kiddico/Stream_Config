@@ -1,0 +1,1 @@
+sudo systemctl status --no-pager nginx | grep -E -e "Active: [a-zA-Z\(\)]*?" --color=always -o

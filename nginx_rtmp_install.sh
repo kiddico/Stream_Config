@@ -10,7 +10,7 @@ sudo apt install wget tar openssl libssl-dev zlib1g-dev libpcre3 build-essential
 sudo groupadd nginx -f
 sudo useradd -g nginx nginx --system
 
-# Grab the laitest nginx source their download page.
+# Grab the laitest nginx source from their download page.
 #   http://nginx.org/en/download.html
 version=1.14.0
 wget http://nginx.org/download/nginx-$version.tar.gz

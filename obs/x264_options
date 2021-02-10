@@ -1,0 +1,5 @@
+5500 kbps, 2 second keyframe interval, medium  preset (modified below), high profile, high priority is set but doesn't appear to actually do that...
+
+partitions=all me=umh merange=16 subme=8 aq-mode=1 rc-lookahead=60 direct-pred=spatial direct=spatial trellis=1 psy-rd=1.0:0.0 no-fast-pskip=1 no-ssim=1 no-psnr=1 b-adapt=2 bframes=3 no-chroma-me=1 ref=4 b-pyramid=1 mixed-refs=1 8x8dct=1
+
+doesn't drop frames w/ 2700X @ 4.125GHz all core.

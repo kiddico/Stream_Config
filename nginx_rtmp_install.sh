@@ -12,7 +12,7 @@ sudo useradd -g nginx nginx --system
 
 # Grab the latest nginx source from their download page.
 #   http://nginx.org/en/download.html
-version=1.19.8
+version=1.23.3
 wget http://nginx.org/download/nginx-$version.tar.gz
 tar -xf nginx-$version.tar.gz
 mv nginx-$version nginx
@@ -23,7 +23,7 @@ mv nginx-$version nginx
 #   https://github.com/arut/nginx-rtmp-module/releases
 
 git clone https://github.com/arut/nginx-rtmp-module
-sed -i -e 's/NGINX RTMP (github.com\/arut\/nginx-rtmp-module)/Hi Mom!/g' nginx-rtmp-module/ngx_rtmp_codec_module.c
+#sed -i -e 's/NGINX RTMP (github.com\/arut\/nginx-rtmp-module)/Hi Mom!/g' nginx-rtmp-module/ngx_rtmp_codec_module.c
 
 #cd nginx/conf
 cd nginx
@@ -45,7 +45,7 @@ cd nginx
 make -j8
 sudo make install
 
-sudo cp $tippytop/nginx.conf /etc/nginx/
+#sudo cp $tippytop/nginx.conf /etc/nginx/
 sudo cp $tippytop/nginx.service /etc/systemd/system/
 sudo systemctl enable nginx
 sudo systemctl start nginx

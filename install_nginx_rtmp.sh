@@ -22,8 +22,12 @@ mv nginx-$version nginx
 #   Also defaults to current dev, grab a stable release.
 #   https://github.com/arut/nginx-rtmp-module/releases
 
-git clone https://github.com/arut/nginx-rtmp-module
+# There's a fork that is under active, let's use that instead.
+#git clone https://github.com/arut/nginx-rtmp-module
+git clone https://github.com/sergey-dryabzhinsky/nginx-rtmp-module
+
 #sed -i -e 's/NGINX RTMP (github.com\/arut\/nginx-rtmp-module)/Hi Mom!/g' nginx-rtmp-module/ngx_rtmp_codec_module.c
+sed -i -e 's/NGINX RTMP (github.com\/sergey-dryabzhinsky\/nginx-rtmp-module)/Hi Mom!/g' nginx-rtmp-module/ngx_rtmp_codec_module.c
 
 #cd nginx/conf
 cd nginx

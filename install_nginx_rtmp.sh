@@ -12,7 +12,7 @@ sudo useradd -g nginx nginx --system
 
 # Grab the latest nginx source from their download page.
 #   http://nginx.org/en/download.html
-version=1.23.3
+version=1.25.5
 wget http://nginx.org/download/nginx-$version.tar.gz
 tar -xf nginx-$version.tar.gz
 mv nginx-$version nginx

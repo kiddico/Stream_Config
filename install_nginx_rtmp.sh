@@ -46,7 +46,7 @@ cd nginx
 
 
 
-make -j8
+make -j$(nproc)
 sudo make install
 
 #sudo cp $tippytop/nginx.conf /etc/nginx/
